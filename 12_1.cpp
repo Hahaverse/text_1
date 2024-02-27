@@ -1,4 +1,3 @@
-//2023111359 ÃÖ°¡À±
 #include <iostream>
 #include <iomanip>
 #include <cstdlib>
@@ -11,22 +10,22 @@ void randomCounts(int inumbers[], int size, int counts[]);
 int main()
 {
     int i, size = 10;
-    int counts[10] = { 0 };    // ¼ıÀÚ(0~9) º° ÃâÇö ºóµµ 
+    int counts[10] = { 0 };    // ìˆ«ì(0~9) ë³„ ì¶œí˜„ ë¹ˆë„ 
     int inumbers[10];
     srand((unsigned int)time(0));
 
-    randomNumbers(inumbers, size);		// ³­¼ö·Î ¹è¿­ ÃÊ±âÈ­
-    randomCounts(inumbers, size, counts);	// ¼ıÀÚ º° °³¼ö °è»ê
+    randomNumbers(inumbers, size);		// ë‚œìˆ˜ë¡œ ë°°ì—´ ì´ˆê¸°í™”
+    randomCounts(inumbers, size, counts);	// ìˆ«ì ë³„ ê°œìˆ˜ ê³„ì‚°
 
-    // ¼ıÀÚ º° °³¼ö Ãâ·Â
-    cout << "³­¼ö: "<<endl;
+    // ìˆ«ì ë³„ ê°œìˆ˜ ì¶œë ¥
+    cout << "ë‚œìˆ˜: "<<endl;
     for (i = 0; i < size; i++)
         cout << setw(5) << inumbers[i];
     cout << endl << endl;
 
 
-    // ¹è¿­ Ãâ·Â
-    cout << "°³¼ö: "<<endl;
+    // ë°°ì—´ ì¶œë ¥
+    cout << "ê°œìˆ˜: "<<endl;
     for (i = 0; i < size; i++)
         cout << setw(5) << i;
     cout << endl;
@@ -41,14 +40,14 @@ int main()
     return 0;
 }
 
-// ³­¼ö·Î ¹è¿­ ÃÊ±âÈ­ 
+// ë‚œìˆ˜ë¡œ ë°°ì—´ ì´ˆê¸°í™” 
 void randomNumbers(int* pnumbers, int size)
 {
     for (int i = 0; i < size; i++)
         *(pnumbers + i) = rand() % 10;
 }
 
-// ¼ıÀÚ º° °³¼ö °è»ê
+// ìˆ«ì ë³„ ê°œìˆ˜ ê³„ì‚°
 void randomCounts(int* pnumbers, int size, int* counts)
 {
     for (int i = 0; i < size; i++)
